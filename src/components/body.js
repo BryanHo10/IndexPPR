@@ -10,20 +10,12 @@ class BodyView extends React.Component {
 
     this.state={
       uri:"img/" + this.props.image,
-      token:"ef0bfffefbeb476b76290707ea6dba4e7f90ea19",
+      token:"",
       externalData: null,
     };
   }
   componentDidMount() {
-    // $.ajax({
-    //     url: `https://api.github.com/orgs/${"ilxl-ppr"}/repos?access_token=${this.state.token}`,
-    //     data:{
 
-    //     },
-    //     complete: function( result ) {
-    //         return (result.responseJSON);
-    //     }
-    //   });
       $.get(`https://api.github.com/orgs/${"ilxl-ppr"}/repos?access_token=${this.state.token}`).done(function(data) {
       this.setState({externalData: data});
     }.bind(this));
