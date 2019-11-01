@@ -1,0 +1,35 @@
+/* Include font css */
+@import url("./fonts/fonts.css");
+
+:root{
+    --darkblue:#051C34;
+    --lightblue:#55D4FF;
+    --lightgray:rgb(178, 179, 179);
+    --eggshell:#F2F4F4;
+}
+#vision-state{
+    padding-left: 30%;
+    padding-right: 15%;
+    padding-bottom: 5%
+}
+#verse-container{
+    background-color: var(--eggshell);
+}
+
+/* Statement of Faith */
+#sidenav{
+    border: 1px solid var(--lightgray);
+    background-color: var(--eggshell);
+    height:100%;;
+}
+
+#sidenav a {
+    padding: 7px 2% 7px 2%;
+    font-size: 18px;
+    color: var(--darkblue);
+    display: block;
+}
+#statement-main{
+
+    padding: 15px 10% 15px 5%;
+}

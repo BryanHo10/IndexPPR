@@ -1,0 +1,35 @@
+/* Parking Location Descriptions */
+
+#parking-loc{
+    width:75%;
+    margin: auto;
+    text-align: left;
+}
+#contact-input{
+    width:65%;
+    margin: auto;
+    font-size: 36px;
+}
+#after-contact{
+    opacity:1;
+    color:var(--darkblue);
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+}
+/* Button Styling */
+.darkbutton{
+    background-color: var(--darkblue);
+    padding:10px;
+    color: white;
+    font-size: 25px;
+}
+.darkbutton:hover{
+    background-color: var(--dilutedblue);
+    color: white;
+}
+#visit-btn{
+    background-color: Transparent; 
+    background-repeat:no-repeat;
+    border: 2px solid white !important;
+    outline: none;
+}
