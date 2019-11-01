@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a>
-    <img alt="ILXL-PPR" src="./public/img/icon/ilxl-ppr.png" width="60" />
+    <img alt="ILXL-PPR" src="./static/img/icon/ilxl-ppr.png" width="60" />
   </a>
 </p>
 <h1 align="center">
