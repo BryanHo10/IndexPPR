@@ -17,18 +17,10 @@ class BodyView extends React.Component {
 
     };
   }
-  componentDidMount() {
-
-      $.get(`https://api.github.com/orgs/${"ilxl-ppr"}/repos?access_token=${this.state.token}`).done(function(data) {
-      this.setState({repoData: data});
-    }.bind(this));
-
-  }
+  
   render() {
       
-    console.log(this.state.repoData);
     if(this.state.repoData){
-        console.log(this.state.repoData);
         return (
         <div id="jumbo-container">
             {this.state.repoData.map((elem)=>{
