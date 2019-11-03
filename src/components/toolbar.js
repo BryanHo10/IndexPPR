@@ -18,15 +18,15 @@ class Toolbar extends React.Component {
 
     return (
       <div id="toolbar-container" style={bg_color}>
-        <div className="container-fluid py-2 px-3">
-        <div className="row">
-        <div className="col-sm toolbar-links">
+        <div className="container-fluid px-3">
+        <div className="row pb-3">
+        <div className="col-lg toolbar-links">
           <Link to="/">
             Home
           </Link>
         </div>
 
-        <div className="col-sm">
+        <div className="col-lg">
           <div className="toolbar-links">
 
           {/* Array  */}

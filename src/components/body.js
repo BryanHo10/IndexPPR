@@ -19,10 +19,15 @@ class BodyView extends React.Component {
   }
   
   render() {
-      
+    let bg_color = {
+      backgroundColor: '#DAFEE3',
+    };
     if(this.state.repoData){
         return (
-        <div id="jumbo-container">
+        <div className = "d-flex justify-content-center py-5" style={bg_color}>
+          
+          <div className = "body-container border py-5 px-3" style={{backgroundColor:"#FFFFFF"}}>
+            <h1>IndexPPR</h1>
             {this.state.repoData.map((elem)=>{
                 return (
                 <RepoView 
@@ -33,13 +38,17 @@ class BodyView extends React.Component {
                     name=  {elem.name}
                 />);
             })}
+            </div>
+
         </div>
         );
     }
     else{
         this.retrieveGithubRepo("ilxl-ppr");
         return (
-            <div id="jumbo-container">
+            <div className = "d-flex justify-content-center py-5">
+              <div className = "body-container border py-5 px-3">
+              </div>
             </div>
             );
     }
