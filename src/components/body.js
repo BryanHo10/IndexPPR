@@ -14,6 +14,9 @@ class BodyView extends React.Component {
       uri:"img/" + this.props.image,
       token: access_token["token"],
       repoData: null,
+      orgName:"ilxl-ppr",
+      pageNum:1,
+
 
     };
   }
@@ -38,13 +41,16 @@ class BodyView extends React.Component {
                     name=  {elem.name}
                 />);
             })}
+              <a href="#" onClick={this.retrieveGithubRepo.bind(this,this.state.orgName,++this.state.pageNum)}>
+                Next
+              </a>
             </div>
-
+            
         </div>
         );
     }
     else{
-        this.retrieveGithubRepo("ilxl-ppr");
+        this.retrieveGithubRepo(this.state.orgName,this.state.pageNum);
         return (
             <div className = "d-flex justify-content-center py-5">
               <div className = "body-container border py-5 px-3">
@@ -53,8 +59,8 @@ class BodyView extends React.Component {
             );
     }
   }
-  retrieveGithubRepo(organization){
-    $.get(`https://api.github.com/orgs/${"ilxl-ppr"}/repos?access_token=${this.state.token}`).done(function(data) {
+  retrieveGithubRepo(organization,pageNum){
+    $.get(`https://api.github.com/orgs/${organization}/repos?access_token=${this.state.token}&page=${pageNum}`).done(function(data) {
       this.setState({repoData: data});
     }.bind(this));
   }
