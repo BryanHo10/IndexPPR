@@ -69,4 +69,5 @@ yarn-error.log
 .yarn-integrity
 
 #Access Tokens
-src/data
+.env.development
+.env.production

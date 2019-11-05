@@ -3,22 +3,21 @@ import {withPrefix} from "gatsby"
 import * as $ from "jquery" 
 import { element } from "prop-types";
 import RepoView from "./Repositories/repo-view"
-import access_token from  "../data/github-ppr.json"
 
 class BodyView extends React.Component {
   //Probably should take a MainObject instead of individual props.
   constructor(props){
     super(props);
-
     this.state={
       uri:"img/" + this.props.image,
-      token: access_token["token"],
+      token: process.env.GITHUB_API_KEY,
       repoData: null,
       orgName:"ilxl-ppr",
       pageNum:1,
 
 
     };
+    
   }
   
   render() {
